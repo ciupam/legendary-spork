@@ -1,0 +1,12 @@
+#prettier-ignore
+version: '3.7'
+services:
+  postgres:
+    container_name: legendary-spork-postgres
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
